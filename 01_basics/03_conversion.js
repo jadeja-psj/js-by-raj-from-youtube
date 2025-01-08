@@ -52,7 +52,53 @@
 
 let someNumber = 33
 let stringNumber = String(someNumber)
-console.log(stringNumber)
-console.log(typeof stringNumber)
+// console.log(stringNumber)
+// console.log(typeof stringNumber)
+
+/*********************************Operations*******************/
+
+let value = 3
+let negativeValue = -value
+// console.log(negativeValue)
+
+// console.log(2+2)
+// console.log(2-2)
+// console.log(2*2)
+// console.log(2**2)
+// console.log(2/2)
+// console.log(2%3)
 
 
+let str1 = "hello"
+let str2 = " boy"
+let str3 = str1+str2 
+// console.log(str3) // hello boy
+
+// the below code or the way of writing is not appreciatable
+// console.log("1" + 2)
+// console.log(1 + "2")
+// console.log("1" + 2 +2)
+// console.log(1 + 2 + "2")
+// console.log(( 3 + 4 ) * 5 % 3);
+
+// the below way of writing is code is not suggested
+let num1, num2, num3
+num1 = num2 = num3 = 2 + 2
+
+let gameCounter = 100
+// console.log(gameCounter++); // 100 because it is post-fix
+// console.log(gameCounter); // 101
+
+let count = 100
+// console.log(++count); // 101 because pre-fix increment
+// console.log(count) // 101 
+
+// avoid the below conversion and comparision
+// console.log(null > 0) // false
+// console.log(null == 0) // false
+// console.log(null >= 0) // true
+
+// == operator works differently as compare to <, >, >=. as comapre to other languages
+
+// === compare the value and also checks the datatype 
+// the above is also called strict check
