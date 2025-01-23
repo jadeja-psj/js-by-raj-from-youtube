@@ -92,8 +92,49 @@ const myobject = {
 
 for(const key in myobject)
 {
-    console.log(`${key} has the object ${myobject[key]}`);   
+    // console.log(`${key} has the object ${myobject[key]}`);   
 }
 
 // Note: if we use the for in loop in array then key will give the index of the element and 
 //arr[key] will give the value
+
+
+// more on arrays
+// array also has some methods in it.
+
+// const coding = ["js","ruby","java","python","cpp"]
+// coding.forEach( function (val){
+    // console.log(val);    
+    // here this function is called callback function
+// })
+
+// coding.forEach((val)=>{
+    // console.log(val);
+    // call back functions using arrow functions
+// })
+
+// coding.forEach( (item,index,arr)=>{
+//     console.log(item,index,arr);
+// })
+
+// NOTE: in call back function the first parameter will print teh item, the second parameter will print the index of the item and the third parameter will always print the entire array.  NO matter the name of parameter
+
+const myCoding = [
+    {
+        languageName: "javascript",
+        languageFileName:"js"
+    },
+    {
+        languageName: "java",
+        languageFileName:"java"
+    },
+    {
+        languageName: "python",
+        languageFileName:"py"
+    }
+]
+
+myCoding.forEach( (item)=>{
+    console.log(item.languageFileName);
+    
+})
