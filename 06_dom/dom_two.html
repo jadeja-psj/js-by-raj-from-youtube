@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color:#fff">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thurshday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent)
+    // console.log(parent.children); // it will give the HTML collection
+    // console.log(parent.children[1]); // it is collection so it has indexing therefore to acess the element
+    // <div class="day">Tuesday</div> the output of the above
+    // console.log(parent.children[1].innerText) //Tuesday
+
+    /*
+    for(i = 0; i < parent.children.length;i++){
+        // console.log(parent.children[i]); // it will give all the children with the tag also
+        console.log(parent.children[i].innerHTML); // it will one by one print all text of of children that is Monday,Tuesday,Wednesday...
+    }*/
+
+    // parent.children[1].style.color = "yellow"; // it will make the element at 1 position to yellow
+
+    // console.log(parent.firstElementChild); // to select the first child element 
+    // console.log(parent.lastElementChild); // to select the last element
+    
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // No need to use every time querySelector for every child we can directly select parent and than perform the other command on other element
+    // console.log(dayOne.parentElement);
+    // the above will give the entire parent element and the content inside it
+    // we can also select the sibling directly if we don't want to select the parentElement.
+    // console.log(dayOne.nextElementSibling); // Tuesday
+    
+    console.log("Nodes: ", parent.childNodes);
+    
+    
+    
+    
+
+    
+</script>
+</html>
