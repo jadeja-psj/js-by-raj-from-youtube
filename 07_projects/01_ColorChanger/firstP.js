@@ -1,22 +1,26 @@
 const buttons = document.querySelectorAll('.button');
-const body = document.querSelector('body');
+const body = document.querySelector('body')
 
 buttons.forEach(function (button) {
   console.log(button);
-  button.addEventListener('click', function (e) {
+  button.addEventListener('click', function(e){
     console.log(e);
     console.log(e.target);
-    if (e.target.id === 'grey') {
+    if(e.target.id === 'grey'){
       body.style.backgroundColor = e.target.id;
+      
     }
-    if (e.target.id === 'white') {
-        body.style.backgroundColor = e.target.id;
-      }
-      if (e.target.id === 'yellow') {
-        body.style.backgroundColor = e.target.id;
-      }
-      if (e.target.id === 'blue') {
-        body.style.backgroundColor = e.target.id;
-      }
-  });
-});
+    if(e.target.id === 'white'){
+      body.style.backgroundColor = e.target.id;
+      body.style.color = "#212121"
+    }
+    if(e.target.id === 'blue'){
+      body.style.backgroundColor = e.target.id;
+      body.style.color = "#fff"
+    }
+    if(e.target.id === 'yellow'){
+      body.style.backgroundColor = e.target.id;
+      body.style.color = "#212121"
+    }
+  })
+})
