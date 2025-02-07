@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd events</title>
+</head>
+<body>
+    <h1>Fast Boy Coding</h1>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+    const sayFast = function(){
+        console.log("Fast")
+    }
+    // setTimeout(sayFast,2000)
+
+    const changeText = function(){
+        document.querySelector('h1').
+        innerHTML = "Best Coder"
+    }
+
+    const changeid = setTimeout(changeText,2000)
+
+    document.querySelector('#stop').
+    addEventListener('click',function(){
+        clearTimeout(changeid)
+        console.log("STOPPED")
+    })
+
+    
+</script>
+</html>
