@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd events</title>
+</head>
+<body>
+    <h1>Coding JavaScript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+
+// setInterval is a JavaScript function that repeatedly executes a specified function at a fixed time interval. It is commonly used for tasks like animations, updating the time, or polling data at regular intervals.
+    
+    const sayDate = function(str){
+        console.log(str,Date.now())
+    }
+
+    const setIntervalID = setInterval(sayDate,1000,"hi");
+
+    clearInterval(setIntervalID)
+    
+</script>
+</html>
