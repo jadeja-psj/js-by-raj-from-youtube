@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApiRequest</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+    
+</body>
+<script>
+
+    // XMLHttpRequest() -> it is a method/class by which we can send and receive a request
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    
+    const xhr = new XMLHttpRequest();
+
+    // to send the request we use open() method to send the request
+
+    xhr.open('GET', requestUrl) 
+
+    // console.log(xhr.readyState); // it will the state of the api
+    // check the state only once
+
+    // check continously the state of the request
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            // To convert the string data type that come from api, to JASON(object)
+            const data = JSON.parse(this.responseText) // to get the current data from the object
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+    
+    // Now to scuccess fully send the request The open method should be called
+    xhr.send() // called open method
+</script>
+</html>
