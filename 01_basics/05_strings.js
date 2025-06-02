@@ -1,34 +1,34 @@
-const name = "GithubMaster"
-const repoCount = 100
-// console.log(name + repoCount + "Value") // the given way is not prefered 
+const name = "hitesh"
+const repoCount = 50
 
-// Therefore we use string Interpolation for that we write everything inside backticks
+console.log(`Hello my name is ${name} and my repo count is ${repoCount}`);
 
-// console.log(`Hello my name is ${name} and total count of my reop is ${repoCount}`);
+const gameName = new String('hitesh-hc')
 
-const gameName = new String('githubcamp')
+console.log(gameName[0]);
+console.log(gameName.__proto__);
 
-// console.log(gameName[0]) // it works like array output:'g'
-// console.log(gameName.__proto__) // output:{}
-// the above will be shown empty but there are many maethods that we can see on browser console
+// console.log(gameName.length); // to find the length of the string 
+// console.log(gameName.toUpperCase()); // to chage the string to upper case but it will not make any change in the original string.
+console.log(gameName.charAt(2)); // to find the character at the given position
 
-// some of the methods
-// console.log(gameName.length); // it will print the length of the string
-// console.log(gameName.toUpperCase()); //it will convert the string to uppercase
-// console.log(gameName.charAt(0)); // used to find char at the specific position
-// cponsole.log(gameName.indexOf('g')) // used to find the position of the specific charater in a string
+console.log(gameName.indexOf('t')); // to get the index of the specific charater
 
-// when you get free than once write an article on how many strings methods are there and how they works
+const newString = gameName.substring(0,4) // it is used to get the a part of string.
+console.log(newString);
 
-// some more methods
 
-const newString = gameName.substring(0,4)
-console.log(newString) // used for slicing start from 0 and end at 4 but the ending index will not be included
+const anotherString = gameName.slice(-8,4) // it is same as substring the only difference is that we can give the negative value.
+console.log(anotherString);
 
-const anotherString = gameName.slice(0,4) // it will also work same as .substring but the only thing here is we can also give negative indexing
+// the -ve indexing starts from the end.
 
-const StringOne = "      Github      "
-console.log(StringOne.trim()) // trim method is used to remove the unnecessary space before and after the string
+const newStringOne = "     Fast    "
+console.log(newStringOne);
+console.log(newStringOne.trim());
 
-// .replace, .include, .split
+const url = "https://Fast.com/fast%20use"
+
+console.log(url.replace('20%', '-'))
+console.log(gameName.split('-'));
 

@@ -1,68 +1,66 @@
-// data are divided into two types 
-// 1. primitive
-// 2. Non-primitive datatypes
+// There are 2 types of datatypes they are:
+// primitive and non-primitive
 
-// Primitive
-// 7 types: String, Number, Booleean, null, undefined, Symbol
-// BigInt
+// primitive this are call by value
+//  7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
 
-const score = 100 //Number type
-const scoreValue = 100.34
+const score =100
+const scoreValue = 100.3
 
 const isLoggedIn = false
 const outsideTemp = null
-let userEmail; // undefined
+let userEmail;
 
-const id = Symbol('123')
-const anotherId = ('123')
+const id = Symbol('1234')
+const anotherId = Symbol('1234')
 
 // console.log(id === anotherId);
 
-// JS is Dynamic typed language
+//BigInt
+const bigNumber = 123243534656534546768756454658768709807667657657868776658795489760945n
+// console.log(bigNumber)
 
 
-// Reference (Non primitive)
+// js is a dynamically typed language
 
-// Array, Objects, Functions
+// Reference or non-primitive
 
-const heros = ["shaktiman","naagraj","doga"] // Array
-// object
-let myobj = {
-    name: "fast",
-    age: 25
+// Arrays, Objects, functions
+
+const heros = ["shaktiman", "naagraj", "doga"]
+
+let myObj ={
+    name:"fast",
+    age:"17"
 }
-// function
-const myFunction = function()
-{
-    console.log("Hello every one welcome to the new series of JavaScript")
+
+const myFunction = function(){
+    console.log("Hello World");
 }
 
-// console.log(typeof myFunction)
+console.log(typeof bigNumber);// typeof is used to find the datatype of the variable
+
+console.log(typeof myFunction); // function or function object
 
 
-// *********************************************************
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// Stack (Primitive), Heap(Non-primitive)
+// Stack (primitive), Heap(Non-primitive)
 
-let myYoutubename = "faststudiesdotcom"
+let myYoutubename = "Fastdotcom"
+let anothername = myYoutubename
 
-let anothername = myYoutubename // here the copy of myYoutubename is given no the original reference
-anothername = "Buildproject&Earn"
-
-// console.log(myYoutubename);
-// console.log(anothername);
-
-// The below is non-primitive type so it will be store in the heap and reference of it will be given
+anothername = "Fastusedotcom"
+console.log(myYoutubename)
+console.log(anothername)
 
 let userOne = {
-    email: "user@google.com",
-    upi: "user@ybl",
+    email:"user@google.com",
+    upi:"user@ybl"
 }
 
-let userTwo = userOne // reference of userOne and userTwo is same
+let userTwo = userOne
+userTwo.email = "Fastgoogle@gmail.com"
 
-userTwo.email = "user2@google.com"
-
-console.log(userOne.email) // output: user2@google.com
-console.log(userTwo.email) // output: user2@google.com as reference is passed
-
+console.log(userOne.email);
+console.log(userTwo.email);

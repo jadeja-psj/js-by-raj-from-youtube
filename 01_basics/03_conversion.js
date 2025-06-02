@@ -9,13 +9,13 @@
 
 // 33 => number and will give the output 33
 
-// let score = "33abcd"
-// console.log(typeof(score))
+let score = "33abcd"
+console.log(typeof(score))
 
-// let valueNumber = Number(score)
+let valueNumber = Number(score)
 
-// console.log(typeof (valueNumber))
-// console.log(valueNumber)
+console.log(typeof (valueNumber))
+console.log(valueNumber)
 
 // let valueBoolean = Boolean(score)
 // console.log(typeof (valueBoolean))
