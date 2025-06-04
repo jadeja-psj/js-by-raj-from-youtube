@@ -1,29 +1,29 @@
 // const tinderUser = new Object()//{} // singleton object
-const tinderUser = {} //{} // non-singleton objects 
+// const tinderUser = {} //{} // non-singleton objects 
 
-tinderUser.id = "567abc"
-tinderUser.name = "sunny"
-tinderUser.isLoggedIn = false
+// tinderUser.id = "567abc"
+// tinderUser.name = "sunny"
+// tinderUser.isLoggedIn = false
 
 // console.log(tinderUser);
 
-const regularUser = {
-    email:"some@google.com",
-    fullname:{
-        userfullname:{
-            firstname:"sunny",
-            lastname:"sxyz",
-        }
-    }
-}
+// const regularUser = {
+//     email:"some@google.com",
+//     fullname:{
+//         userfullname:{
+//             firstname:"sunny",
+//             lastname:"sxyz",
+//         }
+//     }
+// }
 
 // console.log(regularUser.fullname.userfullname.lastname)
 
 // console.log(regularUser.fullname?.userfullname.lastname) // 
 // we the above when the response is comming from api that is the given value is there then do this otherwise some another work
 
-const obj1 = {1: "a",2: "b"}
-const obj2 = {3: "a", 4: "c"}
+// const obj1 = {1: "a",2: "b"}
+// const obj2 = {3: "a", 4: "c"}
 
 // merge two objects into single object
 // const obj3 = Object.assign({}, obj1, obj2)
@@ -36,20 +36,20 @@ const obj2 = {3: "a", 4: "c"}
 
 // when values will come from database
 
-const users = [
-    {
-        id : 1,
-        email:"s@gmail.com"
-    },
-    {
-        id : 1,
-        email:"p@gmail.com"
-    },
-    {
-        id : 1,
-        email:"S@gmail.com"
-    }
-]
+// const users = [
+//     {
+//         id : 1,
+//         email:"s@gmail.com"
+//     },
+//     {
+//         id : 1,
+//         email:"p@gmail.com"
+//     },
+//     {
+//         id : 1,
+//         email:"S@gmail.com"
+//     }
+// ]
 
 // console.log(users[1].email)
 
@@ -64,17 +64,17 @@ const users = [
 
 
 // Destructuring
-const course = {
-    coursename: "Js in hindi",
-    price:"free",
-    courseInstructor: "hitesh"
-}
+// const course = {
+//     coursename: "Js in hindi",
+//     price:"free",
+//     courseInstructor: "hitesh"
+// }
 
 // course.courseInstructor // it is the one way to access the elements inside the object
 
 // another way--> it is useful when we want to use the keys more than one time and we can also give another name/Alias name  to any keys if we 
 
-const {courseInstructor:instrctor,coursename,price} = course
+// const {courseInstructor:instrctor,coursename,price} = course
 // console.log(instrctor);
 
 // JASON syntax  
@@ -89,11 +89,11 @@ const {courseInstructor:instrctor,coursename,price} = course
 
 // some times we get api in array formate as shown below
 
-[
-    {},
-    {},
-    {}
-]
+// [
+//     {},
+//     {},
+//     {}
+// ]
 
 // {
 //     "results": [
@@ -161,3 +161,85 @@ const {courseInstructor:instrctor,coursename,price} = course
 //       "version": "1.4"
 //     }
 //   }
+
+
+
+
+// ********************** Practice **********************************
+
+
+// const tinderUser = new Object() 
+
+const tinderUser = {}
+tinderUser.id = "123abc"
+tinderUser.name = "Sammy"
+tinderUser.isLoggedIn = false
+// console.log(tinderUser);
+
+
+const regularUser = {
+    email : "some@gamil.com",
+    fullname:{
+        userfullname:{
+            firstname:"fast",
+            lastname:"use"
+        }
+    }
+}
+
+// console.log(regularUser.fullname.userfullname.firstname);
+
+// optional chaining
+// console.log(regularUser.fullname?.userfullname.firstname); it is used when response come from the api because it see if it exists then do otherwise not.
+
+const obj1 = {1:"a", 2:"b"}
+const obj2 = {3:"c", 4:"d"}
+const obj3 = {5:"c", 6:"d"}
+
+// const obj4 = {obj1,obj2} 
+// console.log(obj3); // it will print object inside object
+
+// const obj4 = Object.assign(obj1, obj2)
+// const obj4 = Object.assign({}, obj1, obj2,obj3) // amother way to merge an object and it is preffered when more objects are there
+
+const obj4 = {...obj1,...obj2}
+
+// console.log(obj4)
+
+const users = [
+    {
+        id:1,
+        email:"f@gmail.com"
+    },
+    {
+        id:1,
+        email:"f@gmail.com"
+    },
+    {
+        id:1,
+        email:"f@gmail.com"
+    }
+]
+
+
+users[1].email
+// console.log(tinderUser);
+
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+// learn more objects property from the console
+
+
+const course = {
+    coursename:"js in hindi",
+    price: "999",
+    courseInstructor: "Fast"
+}
+
+const {courseInstructor: instuctor} = course
+
+console.log(instuctor);
