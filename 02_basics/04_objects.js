@@ -243,3 +243,19 @@ const course = {
 const {courseInstructor: instuctor} = course
 
 console.log(instuctor);
+
+// the below is the way in which we get the response from api
+// the response we always get in the form of JASON formate
+// {
+//     "name" : "Fast",
+//     "coursename" : "JS full course",
+//     "price" : "free"
+// }
+
+
+// some times we get in the form of array
+[
+    {},
+    {},
+    {}
+]
