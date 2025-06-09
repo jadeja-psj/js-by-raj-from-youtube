@@ -174,11 +174,23 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-let userBooks = books.filter( (bk)=>{bk.genre ===  'History'})
+let userBooks = books.filter((bk) => bk.genre === 'History')
+userBooks = books.filter((bk) => bk.publish >= 1995 && bk.genre === 'History')
 
-userBooks = books.filter((bk)=>{bk.publish >= 2000})
+// console.log(userBooks);
 
-console.log(userBooks);
+const myNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const newNums = myNumbers.map((num) => num + 10)
+// const newNums = myNumbers.map((num) => num>=5) //it will give the boolean output
+
+const newNums = myNumbers
+                .map((num) => num * 10)
+                .map((num) => num + 1)
+                .filter((num) => num >= 40)
+
+// console.log(newNums);
+
 
 
 
