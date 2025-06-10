@@ -1,4 +1,4 @@
-const randomNumber = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt(Math.random() * 100 + 1);
 
 const submit = document.querySelector('#subt')
 const userInput = document.querySelector('#guessField')
@@ -50,26 +50,56 @@ function vaildateGuess(guess){
 
 // The value is equal to random number or not
 function checkGuess(guess){
-    // 
+    if(guess === randomNumber){
+        displayMessage(`You guessed it right`)
+    }
+    else if(guess < randomNumber)
+    {
+        displayMessage(`Number is TOOO low`)
+    }
+    else if(guess > randomNumber){
+        displayMessage(`Number is TOOO High`)
+    }
 }
 
 // clean the value, it will update the Guess and remaining guess
 function displayGuess(guess)
 {
-    // 
+    userInput.value = ''
+    guessSlot.innerHTML += `${guess}`
+    numGuess++;
+    remaining.innerHTML = `${11 - numGuess}`
 }
 
 // it will print the message
 function displayMessage(message){
-    // 
+    lowOrHi.innerHTML = `<h2>${message}</h2>`
 }
 
 function endGame(){
-    // 
+    userInput.value = ''
+    userInput.setAttribute('disabled', '')
+    p.classList.add('button')
+    p.innerHTML =`<h2 id = "newGame">Start new Game</h2>`
+    startOver.appendChild(p)
+    playGame = false
+    newGame();
 }
 
 function newGame(){
-    // 
+    const newGameButton = document.querySelector('#newGame')
+    newGameButton.addEventListener('click', function(e){
+        
+        randomNumber = parseInt(Math.random() * 100 + 1);
+        prevGuess = []
+        numGuess = 1
+        guessSlot.innerHTML = ''
+        remaining.innerHTML = `${11 - numGuess}`
+        userInput.removeAttribute(`disabled`)
+        startOver.removeChild(p)
+        
+        playGame = true
+    })
 }
 
 
