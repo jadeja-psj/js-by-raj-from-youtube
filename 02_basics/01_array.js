@@ -77,10 +77,10 @@ const myArr2 = new Array(1,2,3,4)
 // console.log(myArr.includes(9));
 // console.log(myArr.indexOf(3));
 
-const newArr = myArr.join() // it will conver the array into string
+const newArr = myArr.join() // it will convert the array into string
 
-// console.log(myArr); 
-// console.log(newArr); 
+console.log(myArr); 
+console.log(newArr); 
 // console.log(typeof newArr); // strings
 
 //slice, splice
