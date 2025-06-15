@@ -42,8 +42,10 @@ let myDate = new Date()
 // console.log(typeof myDate);  
 
 // let myCreatedDate = new Date(2023, 0,23) 
+// console.log(myCreatedDate);
 // console.log(myCreatedDate.toDateString());
 // let myCreatedDate = new Date(2023, 0, 23, 5, 3) // we can also give the extra values for the time.
+// console.log(myCreatedDate);
 // let myCreatedDate = new Date("2023-01-14")// it is the YYYY-MM-DD formate
 
 let myCreatedDate = new Date("01-14-2023") // In india we use the formate called MM-DD-YYYY
@@ -59,8 +61,8 @@ let myTimeStamp = Date.now()
 
 let newDate = new Date()
 console.log(newDate);
-console.log(newDate.getMonth() + 1);
-console.log(newDate.getDay());
+// console.log(newDate.getMonth() + 1);
+// console.log(newDate.getDay());
 
 newDate.toLocaleString('deafult',{
     weekday: "long"
